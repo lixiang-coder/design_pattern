@@ -19,7 +19,6 @@ public class Main {
         //Product product2 = new Product(2024, 5.26);
         Product product2 = (Product) product1.Chlone();
         System.out.println(product2.getId() + " " + product2.getPrice());
-
     }
 }
 
