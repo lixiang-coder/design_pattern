@@ -13,6 +13,8 @@ public class SimpleFactory {
         Product productB = Factory.createProduct("B");
         productB.info();
 
+        Product productC = Factory.createProduct("C");
+        productC.info();
     }
 }
 
@@ -27,6 +29,9 @@ class Factory {
             case "B":
                 product = new ProductB();
                 break;
+            /*case "C":
+                product = new ProductC();
+                break;*/
             default:
                 System.out.println("没有 " + type + " 类型的产品！");
                 return null;
@@ -54,3 +59,11 @@ class ProductB extends Product {
         System.out.println("产品的信息：B");
     }
 }
+
+/*
+class ProductC extends Product {
+    @Override
+    public void info() {
+        System.out.println("产品的信息：C");
+    }
+}*/
