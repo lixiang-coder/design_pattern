@@ -18,13 +18,12 @@ public class ChainOfResponsibilityPattern {
         counsellor.setNext(dean);
         dean.setNext(headmaster);
 
-        counsellor.HandRequest(25);
+        counsellor.HandRequest(31);
     }
-
 }
 
 
-abstract class Handler {
+abstract class Handler {    //处理者
     protected Handler next;
 
     public void setNext(Handler next) {
@@ -35,7 +34,7 @@ abstract class Handler {
 }
 
 
-class Counsellor extends Handler {
+class Counsellor extends Handler {  //辅导员
     @Override
     public void HandRequest(int request) {
         if (request <= 7) {
@@ -51,7 +50,7 @@ class Counsellor extends Handler {
 }
 
 
-class Dean extends Handler {
+class Dean extends Handler {    //院长
     @Override
     public void HandRequest(int request) {
         if (request <= 15) {
@@ -67,7 +66,7 @@ class Dean extends Handler {
 }
 
 
-class Headmaster extends Handler {
+class Headmaster extends Handler {  //校长
     @Override
     public void HandRequest(int request) {
         if (request <= 30) {
