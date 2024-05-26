@@ -1,4 +1,4 @@
-package com.xzy.image.com.xzy;
+package com.xzy;
 
 /**
  * 代理模式
