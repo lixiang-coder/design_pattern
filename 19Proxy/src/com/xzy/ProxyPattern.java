@@ -5,8 +5,7 @@ package com.xzy;
  * <p>
  * 意图：为其他对象提供一种代理以控制对这个对象的访问。
  * <p>
- * 适用性：
- * Proxy模式适用于在需要比较通用和复杂的对象指针代替简单的指针的时候
+ * 适用性：Proxy模式适用于在需要比较通用和复杂的对象指针代替简单的指针的时候
  */
 public class ProxyPattern {
     public static void main(String[] args) {

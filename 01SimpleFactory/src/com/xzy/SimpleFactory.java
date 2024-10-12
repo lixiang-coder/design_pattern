@@ -1,9 +1,9 @@
 package com.xzy;
 
 /**
- * 简单工厂模式
+ * 简单工厂模式（静态工厂方法）
  * <p>
- * 缺点：违反了开放-封闭原则
+ * 缺点：违反了开放-封闭原则，即对扩展开放对修改也开放
  */
 public class SimpleFactory {
     public static void main(String[] args) {
@@ -15,6 +15,9 @@ public class SimpleFactory {
 
         Product productC = Factory.createProduct("C");
         productC.info();
+
+        Product productD = Factory.createProduct("D");
+        productD.info();
     }
 }
 
@@ -29,9 +32,9 @@ class Factory {
             case "B":
                 product = new ProductB();
                 break;
-            /*case "C":
+            case "C":
                 product = new ProductC();
-                break;*/
+                break;
             default:
                 System.out.println("没有 " + type + " 类型的产品！");
                 return null;
@@ -60,10 +63,10 @@ class ProductB extends Product {
     }
 }
 
-/*
+
 class ProductC extends Product {
     @Override
     public void info() {
         System.out.println("产品的信息：C");
     }
-}*/
+}

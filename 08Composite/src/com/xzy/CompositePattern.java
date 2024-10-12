@@ -5,12 +5,12 @@ import java.util.List;
 
 /**
  * 组合模式
- *
+ * <p>
  * 意图：将对象组合成树型结构以表示“部分-整体”的层次结构。Composite 使得用户对单个对象和组合对象的使用具有一致性
- *
+ * <p>
  * 适用性：
- * 1. 想表示对象的部分-整体层次结构。
- * 2. 希望用户忽略组合对象与单个对象的不同，用户将统一地使用组合结构中的所有对象。
+ *      1. 想表示对象的部分-整体层次结构。
+ *      2. 希望用户忽略组合对象与单个对象的不同，用户将统一地使用组合结构中的所有对象。
  */
 public class CompositePattern {
     public static void main(String[] args) {
@@ -94,7 +94,7 @@ class File extends AbstractFile {
     }
 
     @Override
-    public boolean Add(AbstractFile filei) {
+    public boolean Add(AbstractFile file) {
         return false;
     }
 
